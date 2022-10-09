@@ -9,7 +9,7 @@ export default function Button({
 }) {
   return (
     <button
-      className={`py-2 hover:ring-2 ring-0 w-fit justify-around px-8 opacity-70 rounded-[5px] text-[18px] font-medium items-center bg-my-black text-my-white hover:ring-my-orange hover:text-my-orange grid place-content-center h-[40px] hover:bg-my-white`}
+      className={`py-2 hover:ring-[3px] ring-0 w-fit transition-colors duration-650 ease-in-out justify-around px-8 opacity-90 rounded-[5px] text-[18px] font-medium items-center bg-my-black text-my-white hover:ring-my-orange hover:text-my-orange grid place-content-center h-[40px] hover:bg-my-white`}
       onClick={onClickButtonHandler}
       type={`${buttonType ? buttonType : "button"}`}
     >

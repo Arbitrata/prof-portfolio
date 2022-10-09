@@ -2,12 +2,19 @@ import React, { Component } from "react";
 import { FiArrowRight, FiDownloadCloud } from "react-icons/fi";
 import Button from "../common/Button";
 import andy from "../common/andy.png";
+import About from "./About";
+import Services from "./Services";
+import Skills from "./Skills";
+import Testimonials from './Testimonials';
+import Contact from "./Contact";
+import Portfolio from "./Portfolio";
 
 class Home extends Component {
   state = {};
   render() {
     return (
-      <div className="w-full h-screen flex overflow-x-hidden">
+      <div className=" overflow-x-hidden">
+      <div id="home" className="w-full h-screen flex overflow-x-hidden">
         <div className="w-[55%] grid place-content-center">
           <div className="h-[600px] w-[520px] pr-12 float-left text-left pt-[140px]">
             <h1>
@@ -50,10 +57,17 @@ class Home extends Component {
             <img
               src={andy}
               alt="andrew mbugua"
-              className="top-1 opacity-60 h-full brightness-100 contrast-100"
+              className="top-1 opacity-80 h-full brightness-10 brightness-60 contrast-150"
             />
           </div>
         </div>
+      </div>
+      <About />
+      <Services />
+      <Skills />
+      <Portfolio />
+      <Testimonials />
+      <Contact/>
       </div>
     );
   }

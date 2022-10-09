@@ -8,9 +8,9 @@ class Services extends Component {
 
   render() {
     return (
-      <div className="h-screen">
+      <div id="services" className="h-screen">
         <div className="h-[120px] pt-6 block ml-[60px]">
-            <div className="text-my-black text-[20px] font-extrabold ml-8">Services</div>
+            <div className="text-my-black text-[20px] text-left font-extrabold ml-8">Services</div>
           <Title title={"My Expertise"} />
         </div>
         <div className="flex items-center ">
@@ -18,7 +18,7 @@ class Services extends Component {
           <ReactCardCarousel
             autoplay={true}
             spread={"wide"}
-            autoplay_speed={3000}
+            autoplay_speed={5000}
             disable_box_shadow={true}
           >
             <Cards

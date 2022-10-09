@@ -22,7 +22,7 @@ class Navbar extends Component {
         label: "Skills",
       },
       {
-        to: "portfolio",
+        to: "projects",
         label: "Portfolio",
       },
       {
@@ -35,6 +35,15 @@ class Navbar extends Component {
       },
     ],
   };
+
+  activeLinkStyle = ({ active }) => {
+    return {
+      fontWeight: active ? "bold" : "normal",
+      textDecoration: active ? "underline" : "none",
+      textDecorationThickness: active ? "decoration-8" : "decoration-none",
+    };
+  };
+
   render() {
     return (
       <nav className="h-[70px] w-screen border-b-2 border-opacity-10 border-my-black z-10 bg-my-white fixed top-0 items-center pl-[100px] pr-[100px] flex justify-between">
@@ -42,12 +51,26 @@ class Navbar extends Component {
           Andy
         </div>
         <div className="flex items-center justify-between h-full basis-1/2">
-              {this.state.links.map((link) => (
-                <Link activeClass="active" to={link.to} key={link.label} className="text-sm ml-4 mr-4 text-my-black opacity-50 font-medium cursor-pointer"> {link.label} </Link>
-              ))}
+          {this.state.links.map((link) => (
+            <Link
+              to={link.to}
+              key={link.label}
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              offset={-50}
+              duration={300}
+              // delay={500}
+              isDynamic={true}
+              activeClass={'active'}
+              className="text-sm ml-4 mr-4 text-my-black opacity-50 font-medium cursor-pointer"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
         <div className=" h-full grid place-content-center basis-1/8">
-            <Button buttonText={"hire me"} />
+          <Button buttonText={"hire me"} />
         </div>
       </nav>
     );

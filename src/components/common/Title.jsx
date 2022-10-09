@@ -3,7 +3,7 @@ import React from "react";
 export default function Title({ title }) {
   return (
     <div className="ml-9 block">
-      <div className="text-my-orange text-[32px] font-bold tracking-widest">
+      <div className="text-my-orange text-[32px] font-bold text-left tracking-widest">
         {title}
       </div>
       <div className="flex items-center w-[70px] justify-between mt-2.5">
