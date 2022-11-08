@@ -6,21 +6,25 @@ class About extends Component {
   state = {};
   render() {
     return (
-      <div id="about" className="w-screen h-screen bg-my-lightgray">
+      <div
+        id="about"
+        className="w-screen max-w-[1400px] h-screen bg-my-lightgray"
+      >
         <div className="h-[50%] w-[100%] bg-my-black opacity-10"></div>
-        <div className="h-fit w-fit flex place-content-stretch mt-[-190px] justify-between ml-[160px]">
+        <div className="h-fit w-fit md:flex block place-content-stretch md:mt-[-190px] mt-[-100px] justify-between md:ml-[160px] ml-[18%]">
           <AboutImage />
-          <div className=" w-[450px] ml-[100px] h-[400px]">
+          <div className="md:w-[450px] md:ml-[100px] ml-[-60px] md:mt-0 mt-[100px] md:h-[400px]">
             <Title title={"About me"} />
-            <h1 className="font-extrabold text-[22px] text-left ml-8 mt-6">
+            <h1 className="font-extrabold text-[22px] text-left md:ml-8 ml-8 md:pt-2 pt-4 md:mt-2 mt-[50px]">
               Why hire me ?
             </h1>
-            <div className=" font-medium text-md mt-14 p-8 w-ful text-left ">
-              Here is some brief description about this Project. To view the
-              project brief and your interactions click on view. Here is some
-              brief description about this Project. To view the project brief
-              and your interactions click on view. Here is some brief
-              description about this Project. To view the project brief and ...
+            <div className=" font-medium text-md md:mt-[70px] md:p-6 p-4 w-ful text-left ">
+              I'm a Passionate and reliable software developer with 1+ years of
+              hands-on experience UI/UX designing, developing, data modelling,
+              managing Projects and implementing applications and solutions
+              using a range of technologies and programming languages. Seeking
+              to leverage broad development experience and hands-on technical
+              expertise in a challenging role as a Software developer.
             </div>
           </div>
         </div>

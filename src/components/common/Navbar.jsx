@@ -1,80 +1,100 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { BiMenu } from "react-icons/bi";
+import { FaHamburger } from "react-icons/fa";
 import { Link } from "react-scroll";
 import Button from "./Button";
 
-class Navbar extends Component {
-  state = {
-    links: [
-      {
-        to: "home",
-        label: "Home",
-      },
-      {
-        to: "about",
-        label: "About",
-      },
-      {
-        to: "services",
-        label: "Services",
-      },
-      {
-        to: "skills",
-        label: "Skills",
-      },
-      {
-        to: "projects",
-        label: "Portfolio",
-      },
-      {
-        to: "testimonials",
-        label: "testimonials",
-      },
-      {
-        to: "contact",
-        label: "Contact",
-      },
-    ],
-  };
+function Navbar() {
+  const links = [
+    {
+      to: "home",
+      label: "Home",
+    },
+    {
+      to: "about",
+      label: "About",
+    },
+    {
+      to: "services",
+      label: "Services",
+    },
+    {
+      to: "skills",
+      label: "Skills",
+    },
+    {
+      to: "projects",
+      label: "Portfolio",
+    },
+    {
+      to: "testimonials",
+      label: "testimonials",
+    },
+    {
+      to: "contact",
+      label: "Contact",
+    },
+  ];
 
-  activeLinkStyle = ({ active }) => {
-    return {
-      fontWeight: active ? "bold" : "normal",
-      textDecoration: active ? "underline" : "none",
-      textDecorationThickness: active ? "decoration-8" : "decoration-none",
-    };
-  };
+  const [open, setOpen] = useState(false);
 
-  render() {
-    return (
-      <nav className="h-[70px] w-screen border-b-2 border-opacity-10 border-my-black z-10 bg-my-white fixed top-0 items-center pl-[100px] pr-[100px] flex justify-between">
-        <div className="item-center h-full text-3xl grid place-content-center text-my-orange font-extrabold basis-1/8">
-          Andy
-        </div>
-        <div className="flex items-center justify-between h-full basis-1/2">
-          {this.state.links.map((link) => (
-            <Link
-              to={link.to}
-              key={link.label}
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={-50}
-              duration={300}
-              // delay={500}
-              isDynamic={true}
-              activeClass={'active'}
-              className="text-sm ml-4 mr-4 text-my-black opacity-50 font-medium cursor-pointer"
-            >
-              {link.label}
-            </Link>
+  return (
+    <nav className="md:h-[70px] h-[50px] bg-my-white w-screen max-w-[1400px] border-b-2 border-opacity-10 border-my-black z-10 bg-my-white fixed top-0 items-center md:pl-[100px] px-4 md:pr-[100px] flex justify-between">
+      <button
+        onClick={() => setOpen(!open)}
+        className="md:hidden visible rounded-[4px] p-.5 ring-my-orange ring-1 mr-2"
+      >
+        <BiMenu size={25} />
+      </button>
+
+      <div className="item-center h-full md:mr-10 mr-[150px]  md:text-3xl text-lg grid place-content-center text-my-orange font-extrabold basis-1/8">
+        Andy
+      </div>
+      <nav className="">
+        <ul
+          className={`md:flex block md:w-fit w-[80%] transition-all duration-500 md:static absolute md:bg-my-white bg-my-blue h-[300px] items-center md:justify-between md:h-full basis-1/2 ${
+            open
+              ? "top-12 opacity-100  ml-0 left-8 rounded-[20px] md:pt-0 pt-6"
+              : "top-[-100px]  md:opacity-100 opacity-0 right-8"
+          }`}
+        >
+          {links.map((link) => (
+            <li className=" md:float-none float-left md:ml-0 ml-[100px] md:mt-0 mt-3">
+              <Link
+              onClick={() => setOpen(!open)}
+                to={link.to}
+                key={link.label}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={-50}
+                duration={300}
+                isDynamic={true}
+                activeClass={"active"}
+                className="md:text-sm ml-4 mr-4 md:text-my-black text-my-black bg-my-white md:px-0 md:py-0 px-4 py-1 rounded opacity-50 md:font-medium font-bold  cursor-pointer"
+              >
+                {link.label}
+              </Link>
+            </li>
           ))}
-        </div>
-        <div className=" h-full grid place-content-center basis-1/8">
-          <Button buttonText={"hire me"} />
-        </div>
+        </ul>
       </nav>
-    );
-  }
+
+      <div className=" h-full grid place-content-center basis-1/8">
+        <Link to="contact">
+         <Button buttonText={"hire me"} />
+        </Link>  
+      </div>
+    </nav>
+  );
 }
+
+// activeLinkStyle = ({ active }) => {
+//   return {
+//     fontWeight: active ? "bold" : "normal",
+//     textDecoration: active ? "underline" : "none",
+//     textDecorationThickness: active ? "decoration-8" : "decoration-none",
+//   };
+// };
 
 export default Navbar;

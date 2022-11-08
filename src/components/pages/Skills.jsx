@@ -6,14 +6,14 @@ import Title from "../common/Title";
 
 const Skills = () => {
   return (
-    <div id="skills" className="h-fit bg-my-lightgray w-screen block pb-10">
-      <div className="w-full h-[100px] grid place-content-center">
+    <div id="skills" className="h-fit bg-my-lightgray w-screen block pb-10 md:pt-0  max-w-[1400px]">
+      <div className="w-full h-[100px] pt-4 grid place-content-center">
         <Title title={"Skills"} />
       </div>
 
       <div className="w-full h-fit mt-6">
-        <div className=" block ml-[16.5%] mr-[17%]">
-          <div className="flex h-fit justify-start items-center">
+        <div className=" block md:ml-[16.5%] ml-[10%] md:mr-[17%]">
+          <div className="md:flex block h-fit justify-start items-center">
             <Cards
               skillsCard={true}
               title={"Technologies"}
@@ -22,7 +22,7 @@ const Skills = () => {
             <SkillCircles left={true} icon={<BiCodeAlt size={40} />} />
           </div>
 
-          <div className="flex justify-end mt-[-80px] items-center">
+          <div className="md:flex block justify-end md:mt-[-80px] mt-6 items-center">
             <SkillCircles right={true} icon={<FiFigma size={35} />} />
             <Cards
               skillsCard={true}
@@ -31,7 +31,7 @@ const Skills = () => {
             />
           </div>
 
-          <div className="flex h-fit mt-[-80px] items-center">
+          <div className="md:flex block h-fit md:mt-[-80px] mt-14 items-center">
             <Cards
               skillsCard={true}
               title={"Control version"}
@@ -40,7 +40,7 @@ const Skills = () => {
             <SkillCircles left={true} icon={<BiGitBranch size={35} />} />
           </div>
 
-          <div className="flex h-fit justify-end mt-[-80px] items-center">
+          <div className="md:flex block h-fit justify-end md:mt-[-80px] mt-14 items-center">
             <SkillCircles right={true} icon={<BiBorderAll size={35} />} />
             <Cards skillsCard={true}  title={"project management"}
               text="Jira, Agile methodology, Slack," />

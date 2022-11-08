@@ -15,8 +15,20 @@ export default function Testimonials() {
       text: "There is absolutely no doubt in my mind that without Flowbite, I would not have been able to make the jump to Ueno, a digital agency I started in 2014. The work I got through Flowbite made it possible for me to have something to build on. We now have about 45 people on our team, a lot of whom we found and recruited through Flowbite",
     },
     {
-      title: "Great design!",
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. ",
+      title: "Great Worker!",
+      text: "I've known Andrew for almost a year and have found him to be hardworking, goal-oriented, tenacious, and an achiever. I believe that his academic credentials and technical skills will be extremely valuable to you as a client and to your company.",
+    },
+    {
+      title: "Testimonials",
+      text: "There is absolutely no doubt in my mind that without Flowbite, I would not have been able to make the jump to Ueno, a digital agency I started in 2014. The work I got through Flowbite made it possible for me to have something to build on. We now have about 45 people on our team, a lot of whom we found and recruited through Flowbite",
+    },
+    {
+      title: "Testimonials",
+      text: "There is absolutely no doubt in my mind that without Flowbite, I would not have been able to make the jump to Ueno, a digital agency I started in 2014. The work I got through Flowbite made it possible for me to have something to build on. We now have about 45 people on our team, a lot of whom we found and recruited through Flowbite",
+    },
+    {
+      title: "Testimonials",
+      text: "There is absolutely no doubt in my mind that without Flowbite, I would not have been able to make the jump to Ueno, a digital agency I started in 2014. The work I got through Flowbite made it possible for me to have something to build on. We now have about 45 people on our team, a lot of whom we found and recruited through Flowbite",
     },
     {
       title: "Testimonials",
@@ -27,21 +39,37 @@ export default function Testimonials() {
   return (
     <div
       id="testimonials"
-      className="block w-screen h-screen bg-my-lightgray py-2 "
+      className="block w-screen md:h-screen md:pt-0 pt-14 h-fit bg-my-lightgray md:pb-0 pb-14 max-w-[1400px]"
     >
-      <div className="ml-[100px]">
+      <div className="md:ml-[100px]">
         <Title title={"Testimonials"} />
       </div>
 
-      <div className="flex pr-[100px] pl-[150px] h-[80%] mt-14">
+      <div className="md:flex md:pr-[100px] md:pl-[150px] w-fit md:h-[60%] md:mt-14 mt-14">
         <Tab.Group defaultIndex={3}>
-          <div className="block w-[34%] pb-2 max-h-[400px] shadow-lg shadow-my-black pl-5 pr-6 pt-4 overflow-y-auto border-r-2 border-my-black border-opacity-40 mr-10 ">
-            <Tab.List>
-              <Tab className={""}>
+          <div className="md:block flex md:w-[40%] w-[100%] pb-2 md:max-h-[400px] overflow-y-auto  max-h-[190px] mt-6 shadow-lg shadow-my-black py-4">
+            <Tab.List className={""}>
+              <Tab >
                 <Cards
                   testimonialCard={true}
                   image="https://assets.vogue.com/photos/620ea213975b70b4370ad5c5/master/pass/MCDSEAN_ZU005.jpg"
-                  name={"Andy"}
+                  name={"James Gichimu"}
+                  title={"CEO and Co-founder Apprentice cloud limited"}
+                />
+              </Tab>
+              <Tab>
+                <Cards
+                  testimonialCard={true}
+                  image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0K34qUFH8QdwAVBFqMfY9p93E5M4_-IUcaQ&usqp=CAU"
+                  name={"Edwin Muriri"}
+                  title={"Software Engineer & a Technical mentor"}
+                />
+              </Tab>
+              <Tab>
+                <Cards
+                  testimonialCard={true}
+                  image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0K34qUFH8QdwAVBFqMfY9p93E5M4_-IUcaQ&usqp=CAU"
+                  name={"Timothy Munene"}
                   title={"Software developer"}
                 />
               </Tab>
@@ -49,29 +77,29 @@ export default function Testimonials() {
                 <Cards
                   testimonialCard={true}
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0K34qUFH8QdwAVBFqMfY9p93E5M4_-IUcaQ&usqp=CAU"
-                  name={"Andy"}
-                  title={"Software developer"}
+                  name={"Alex Mwangi"}
+                  title={"Ui/ux designer"}
                 />
               </Tab>
               <Tab>
                 <Cards
                   testimonialCard={true}
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0K34qUFH8QdwAVBFqMfY9p93E5M4_-IUcaQ&usqp=CAU"
-                  name={"Andy"}
-                  title={"Software developer"}
+                  name={"Josephine Wairimu"}
+                  title={"Technical Mentor"}
                 />
               </Tab>
               <Tab>
                 <Cards
                   testimonialCard={true}
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0K34qUFH8QdwAVBFqMfY9p93E5M4_-IUcaQ&usqp=CAU"
-                  name={"Andy mbugua"}
-                  title={"Software developer"}
+                  name={"Josephine Wairimu"}
+                  title={"Technical Mentor"}
                 />
               </Tab>
             </Tab.List>
           </div>
-          <div className=" w-[60%] place-content-center  rounded-lg h-[100%] pl-[60px] pt-[-0px] text-left">
+          <div className="md:w-[60%] place-content-center  rounded-lg h-[100%] md:pl-[60px] pt-[-0px] text-left">
             <Tab.Panels>
               {testimonials.map((t) => (
                 <Tab.Panel key={t.title}>
